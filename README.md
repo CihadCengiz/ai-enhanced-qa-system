@@ -72,9 +72,13 @@ Ensure you have the following installed:
    ```bash
    npm install
    ```
-3. Start the development server:
+3. Build project:
    ```bash
-   npm run start
+   npm run build
+   ```
+4. Start the development server:
+   ```bash
+   npm start
    ```
 
 ### Python Script

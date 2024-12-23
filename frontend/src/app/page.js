@@ -6,7 +6,7 @@ const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3000';
 
 export default function Home() {
   // State variables to manage user interactions, responses, and UI state
-  const [question, setQuestion] = useState('whats the evaluation criteria?');
+  const [question, setQuestion] = useState('');
   const [answers] = useState([]); // Stores the conversation history
   const [isLoading, setIsLoading] = useState(false); // Loading state for API calls
   const [modalOpen, setModalOpen] = useState(false); // Controls the visibility of the modal
