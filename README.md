@@ -56,7 +56,6 @@ Ensure you have the following installed:
    ```env
    OPENAI_API_KEY=your_openai_api_key
    PINECONE_API_KEY=your_pinecone_api_key
-   PINECONE_ENVIRONMENT=your_pinecone_environment
    ```
 4. Start the development server:
    ```bash
@@ -77,6 +76,16 @@ Ensure you have the following installed:
    ```bash
    npm run start
    ```
+
+### Python Script
+
+1. Open the `process_pdf_and_update_metadata.py` script file.
+
+2. Configure the required environment variables:
+
+```env
+pc = Pinecone(api_key="YOUR_API_KEY")
+```
 
 ---
 
