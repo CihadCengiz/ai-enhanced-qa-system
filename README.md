@@ -72,11 +72,12 @@ Ensure you have the following installed:
    ```bash
    npm install
    ```
-3. Build project:
+3. Create a `.env` file and configure the required environment variables:
+4. Build project:
    ```bash
    npm run build
    ```
-4. Start the development server:
+5. Start the development server:
    ```bash
    npm start
    ```
