@@ -46,7 +46,7 @@ app.post('/upload', upload.single('pdfFile'), async (req, res) => {
       model: 'text-embedding-3-small',
     });
 
-    const indexName = 'openai-enhanced-qa-system';
+    const indexName = process.env.PINECONE_INDEX_NAME;
     const index = pc.index(indexName);
 
     // Prepare chunked data for embeddings
@@ -109,7 +109,7 @@ app.post('/ask', async (req, res) => {
     const pc = new Pinecone({
       apiKey: process.env.PINECONE_API_KEY,
     });
-    const indexName = 'openai-enhanced-qa-system';
+    const indexName = process.env.PINECONE_INDEX_NAME;
     const index = pc.index(indexName);
 
     // Generate query embedding for the question
