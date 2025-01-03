@@ -72,8 +72,10 @@ Ensure you have the following installed:
    ```bash
    npm install
    ```
-3. Create a `.env` file
-
+3. Create a `.env` file and configure the required environment variables:
+   ```env
+   BACKEND_URL=http://localhost:3000
+   ```
 4. Build project:
    ```bash
    npm run build
