@@ -72,7 +72,8 @@ Ensure you have the following installed:
    ```bash
    npm install
    ```
-3. Create a `.env` file and configure the required environment variables:
+3. Create a `.env` file
+
 4. Build project:
    ```bash
    npm run build
