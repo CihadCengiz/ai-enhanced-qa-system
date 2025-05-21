@@ -89,13 +89,13 @@ export default function Home() {
         <div className='flex flex-col h-screen bg-gray-800'>
           {/* Header */}
           <header className='bg-gray-700 shadow-md py-4 px-6'>
-            <h1 className='text-2xl font-semibold text-gray-100'>
+            <h1 className='text-xl md:text-2xl font-semibold text-gray-100'>
               AI-Enhanced Document QA System
             </h1>
           </header>
 
           {/* Main content area */}
-          <div className='flex-grow p-6 space-y-4 overflow-y-auto'>
+          <div className='flex-grow p-4 sm:p-6 space-y-4 overflow-y-auto'>
             {/* Display conversation history */}
             {answers.map((item, index) => (
               <div
@@ -111,11 +111,11 @@ export default function Home() {
                       : 'bg-gray-600 text-gray-100'
                   }`}
                 >
-                  <p className='text-sm'>{item.text}</p>
+                  <p className='text-sm md:text-base'>{item.text}</p>
                   {item.role === 'ai' && (
                     <button
                       onClick={() => handleShowRelevantChunks(index)}
-                      className='mt-2 text-xs text-teal-300 hover:text-teal-100'
+                      className='mt-2 text-xs sm:text-sm text-teal-300 hover:text-teal-100'
                     >
                       Show Relevant Chunks
                     </button>
@@ -155,7 +155,7 @@ export default function Home() {
 
           {/* Input form */}
           <div className='border-t border-gray-600 bg-gray-700 p-4'>
-            <form className='flex items-center gap-3'>
+            <form className='flex flex-col sm:flex-row items-center gap-3'>
               {/* File upload button */}
               <input
                 type='file'
@@ -193,7 +193,7 @@ export default function Home() {
                 value={question}
                 onChange={(e) => handleQuestionChange(e)}
                 placeholder='Ask me a question...'
-                className='flex-grow bg-gray-600 border border-gray-500 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-100 placeholder-gray-400 p-2 h-[48px] resize-none'
+                className='w-full sm:flex-grow bg-gray-600 border border-gray-500 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent text-gray-100 placeholder-gray-400 p-2 h-[48px] resize-none'
               />
 
               {/* Ask question button */}
